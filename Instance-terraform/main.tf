@@ -31,9 +31,9 @@ resource "aws_security_group" "my-ec2" {
 
 
 resource "aws_instance" "web" {
-  ami                    = "ami-03f4878755434977f" # change your ami name 
+  ami                    = "ami-005fc0f236362e99f" # change your ami name 
   instance_type          = "t2.medium"
-  key_name               = "my key"
+  key_name               = "Jenkins"
   vpc_security_group_ids = [aws_security_group.my-ec2.id]
   user_data              = templatefile("./script.sh", {})
 
